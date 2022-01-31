@@ -5,9 +5,11 @@ const Days = $(".card__item--day");
 const Hours = $(".card__item--hour");
 const Minutes = $(".card__item--minute");
 const Seconds = $(".card__item--second");
+const audio = $('.audio')
 
 function countdown() {
-    const dateTime = new Date("Febuary 1, 2022 00:00:00").getTime();
+audio.play()
+const dateTime = new Date("Febuary 1, 2022 00:00:00").getTime();
 const nowTime = new Date().getTime();
 const gap = dateTime - nowTime;
 
@@ -20,8 +22,6 @@ const textDays = Math.floor(gap / day);
 const textHours = Math.floor((gap % day) / hour);
 const textMinutes = Math.floor((gap % hour) / minute);
 const textSeconds = Math.floor((gap % minute) / second);
-
-console.log(textDays, textHours, textMinutes, textSeconds)
 
 textDays < 10 
   ? (Days.innerHTML = `0${textDays}`) 
