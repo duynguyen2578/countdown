@@ -56,6 +56,22 @@ body {
   transform: translateX(50%, -50%)
 }
 
+.box.hide .detail{
+  display: none;
+}
+
+.box.hide .year {
+  display: none;
+}
+
+.box.hide .header {
+  position: relative;
+  top: 50%;
+  transform: scale(1.6);
+  color: var(--primary--color);
+  transition: all 0.5s;
+}
+
 .year {
   display: flex;
   width: 250px;
